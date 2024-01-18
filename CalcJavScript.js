@@ -1,4 +1,15 @@
-menu = 0 
+var menu = 0
+var bnt1 = document.querySelector('#button1')
+var bnt2 = document.querySelector('#button2')
+var bnt3 = document.querySelector('#button3')
+var bnt4 = document.querySelector('#button4')
+var telaInicial = document.querySelector('telaInicial')
+var ValorInicial = document.querySelector('ValorInicial')
+var Rodadas = document.querySelector('Rodadas')
+var Especial = document.querySelector('Especial')
+ValorInicial.style.display = none
+Rodadas.style.display = none
+Especial.style.display = none
 function exibicaoRodadas (){
     valorTotal = 0
     contador = 0 
