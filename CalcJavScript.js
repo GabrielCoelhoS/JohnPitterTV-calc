@@ -7,9 +7,9 @@ var telaInicial = document.querySelector('#telaInicial')
 var ValorInicial = document.querySelector('#ValorInicial')
 var Rodadas = document.querySelector('#Rodadas')
 var Especial = document.querySelector('#Especial')
-ValorInicial.style.display = 'none';
-Rodadas.style.display = 'none';
-Especial.style.display = 'none';
+ValorInicial.style.display = 'none'
+Rodadas.style.display = 'none'
+Especial.style.display = 'none'
 function exibicaoRodadas (){
     valorTotal = 0
     contador = 0 
