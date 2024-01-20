@@ -1,12 +1,12 @@
-#ValorInicial{
+.ValorInicial{
     background-color: black;
     display: none;
 }
-#Rodadas{
+.Rodadas{
     background-color: black;
     display: none;
 }
-#Especial{
+.Especial{
     background-color: black;
     display: none;
 }
