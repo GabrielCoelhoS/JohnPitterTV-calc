@@ -1,9 +1,12 @@
 #ValorInicial{
     background-color: black;
+    display: none;
 }
 #Rodadas{
     background-color: black;
+    display: none;
 }
 #Especial{
     background-color: black;
+    display: none;
 }
