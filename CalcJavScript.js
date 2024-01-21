@@ -8,18 +8,18 @@ var Rodadas = document.querySelector('#Rodadas');
 var Especial = document.querySelector('#Especial');
 var Especial2 = document.querySelector('#Especial2')
 bntValorInicial.addEventListener('click', function() {
-    telaInicial.style.display = 'none'
-    ValorInicial.style.display = 'block'
+    telaInicial.style.display = 'none';
+    ValorInicial.style.display = 'block';
 });
 bntRodadas.addEventListener('click', function(){
-    telaInicial.style.display = 'none'
-    Rodadas.style.display = 'block'
+    telaInicial.style.display = 'none';
+    Rodadas.style.display = 'block';
 });
 bntEspecial.addEventListener('click', function(){
-    telaInicial.style.display = 'none'
-    Especial.style.display = 'block'
+    telaInicial.style.display = 'none';
+    Especial.style.display = 'block';
 });
 bntEspecial2.addEventListener('click', function(){
-    telaInicial.style.display = 'none'
-    Especial2.style.display = 'block'
+    telaInicial.style.display = 'none';
+    Especial2.style.display = 'block';
 });
