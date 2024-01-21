@@ -7,7 +7,7 @@ var ValorInicial = document.querySelector('#ValorInicial');
 var Rodadas = document.querySelector('#Rodadas');
 var Especial = document.querySelector('#Especial');
 var Especial2 = document.querySelector('#Especial2')
-bntValorInicial.addEventListener('click', function(){
+bntValorInicial.addEventListener('click', function() {
     telaInicial.style.display = 'none'
     ValorInicial.style.display = 'block'
 });
