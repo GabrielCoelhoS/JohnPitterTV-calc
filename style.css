@@ -1,12 +1,6 @@
-form#ValorInicial{
+form{
     background-color: black;
-    display: none;
 }
-form#Rodadas{
-    background-color: black;
-    display: none;
-}
-form#Especial{
-    background-color: black;
+#ValorInicial, #Rodadas, #Especial{
     display: none;
 }
