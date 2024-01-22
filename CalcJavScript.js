@@ -6,8 +6,7 @@ var telaInicial = document.querySelector('#telaInicial');
 var ValorInicial = document.querySelector('#ValorInicial');
 var Rodadas = document.querySelector('#Rodadas');
 var Especial = document.querySelector('#Especial');
-var Especial2 = document.querySelector('#Especial2')
-var btn = document.querySelector('#show-or-hide');
+var Especial2 = document.querySelector('#Especial2');
 var container = document.querySelector('.container');
 bntValorInicial.addEventListener('click', function() {
     telaInicial.style.display = 'none';
