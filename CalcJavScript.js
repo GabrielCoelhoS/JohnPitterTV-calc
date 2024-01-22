@@ -9,27 +9,23 @@ var Especial = document.querySelector('#Especial');
 var Especial2 = document.querySelector('#Especial2')
 var btn = document.querySelector('#show-or-hide');
 var container = document.querySelector('.container');
-btn.addEventListener('click', function(){
-    if (container.style.display === 'block') {
-        container.style.display = 'none';
-    }
-    else {
-        container.style.display = 'block';
-    }
-});
-bntValorInicial.addEventListener('click', function() {
+bntValorInicial.addEventListener('click', (event) =>{
+    event.preventDefault();
     telaInicial.style.display = 'none';
     ValorInicial.style.display = 'block';
 });
-bntRodadas.addEventListener('click', function(){
+bntRodadas.addEventListener('click', (event) =>{
+    event.preventDefault();
     telaInicial.style.display = 'none';
     Rodadas.style.display = 'block';
 });
-bntEspecial.addEventListener('click', function(){
+bntEspecial.addEventListener('click', (event) =>{
+    event.preventDefault();
     telaInicial.style.display = 'none';
     Especial.style.display = 'block';
 });
-bntEspecial2.addEventListener('click', function(){
+bntEspecial2.addEventListener('click', (event) =>{
+    event.preventDefault();
     telaInicial.style.display = 'none';
     Especial2.style.display = 'block';
 });
