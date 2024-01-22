@@ -9,7 +9,7 @@ var Especial = document.querySelector('#Especial');
 var Especial2 = document.querySelector('#Especial2')
 var btn = document.querySelector('#show-or-hide');
 var container = document.querySelector('.container');
-bntValorInicial.addEventListener('click', (event) =>{
+bntValorInicial.addEventListener('click', (event) => {
     event.preventDefault();
     telaInicial.style.display = 'none';
     ValorInicial.style.display = 'block';
