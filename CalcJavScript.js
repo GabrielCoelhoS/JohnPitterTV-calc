@@ -21,7 +21,7 @@ bntEspecial.addEventListener('click', function(){
     telaInicial.style.display = 'none';
     Especial.style.display = 'block';
 });
-bntEspecial2.addEventListener('click', fubction(){
+bntEspecial2.addEventListener('click', function(){
     telaInicial.style.display = 'none';
     Especial2.style.display = 'block';
 });
