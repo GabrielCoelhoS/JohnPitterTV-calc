@@ -1,20 +1,28 @@
+body{
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+}
 #image{
     background-color: #1c1c1c;
+    width: 100vh;
+    height: 20vh;
 }
 input{
     color: #262626;
-    font-family: 'Inter', sans-serif;
 }
 form{
     background-color: #0e0f16;
-    font-family: 'Inter', sans-serif;
     display: none;
 }
 .button{
     background-color: #343A40;
     width: 30vh;
+    height: 10vh;
+    border: none;
+}
+#button3{
+    w
 }
 #TelaInicial{
-    display: flex;
     align-items: center;
 }
