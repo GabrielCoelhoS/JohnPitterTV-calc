@@ -5,7 +5,7 @@ body{
 #image{
     background-color: #1c1c1c;
     width: 100vh;
-    height: 20vh;
+    height: 10vh;
 }
 input{
     color: #262626;
@@ -21,7 +21,7 @@ form{
     border: none;
 }
 #button3{
-    w
+    width: 60vh;
 }
 #TelaInicial{
     align-items: center;
