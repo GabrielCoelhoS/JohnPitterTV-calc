@@ -6,16 +6,23 @@
     <title>Calculadora JohnPitterTV</title>
     <script defer src="CalcJavScript.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="TelaInicial">
-        <img src="" alt=""><br>
-        <button id="button1">Valor Inicial</button>
-        <button id="button2">Rodadas</button><br>
-        <button id="button3">Especial</button>
+        <div id="image">
+            <img src="imagens/logo-john.png" alt="">
+        </div><br>
+        <button class="button" id="button1">Valor Inicial</button>
+        <button class="button" id="button2">Rodadas</button><br>
+        <button class="button" id="button3">Especial</button>
     </div>
     <form class="ValorInicial">
-        <img src="" alt=""><br>
+        <div id="image">
+            <img src="imagens/logo-john.png" alt="">
+        </div><br>
         <label for="Saldo">Saldo</label>
         <input type="number" name="Saldo" id="salso">
         <label for="QuantRodadas">Quantidade de Rodadas</label>
@@ -39,10 +46,12 @@
             <option value="14">14</option>
         </select>
         <br>
-        <input type="submit" value="calcular">
+        <input class="button" type="submit" value="calcular">
     </form>
     <form id="Rodadas">
-        <img src="" alt=""><br>
+        <div id="image">
+            <img src="imagens/logo-john.png" alt="">
+        </div><br>
         <label for="Saldo">Saldo</label>
         <input type="number" name="Saldo" id="salso">
         <label for="ValorInicial">ValorInicial</label>
@@ -66,10 +75,12 @@
             <option value="14">14</option>
         </select>
         <br>
-        <input type="submit" value="calcular">
+        <input class="button" type="submit" value="calcular">
     </form>
     <form id="Especial">
-        <img src="" alt=""><br>
+        <div id="image">
+            <img src="imagens/logo-john.png" alt="">
+        </div><br>
         <label for="Saldo">Saldo</label>
         <input type="number" name="Saldo" id="salso">
         <label for="ValorInicial">ValorInicial</label>
@@ -95,7 +106,7 @@
             <option value="14">14</option>
         </select>
         <br>
-        <input type="submit" value="calcular">
+        <input class="button" type="submit" value="calcular">
     </form>
 </body>
 </html>

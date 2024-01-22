@@ -1,6 +1,20 @@
-form{
-    background-color: black;
+#image{
+    background-color: #1c1c1c;
 }
-#ValorInicial, #Rodadas, #Especial{
+input{
+    color: #262626;
+    font-family: 'Inter', sans-serif;
+}
+form{
+    background-color: #0e0f16;
+    font-family: 'Inter', sans-serif;
     display: none;
+}
+.button{
+    background-color: #343A40;
+    width: 30vh;
+}
+#TelaInicial{
+    display: flex;
+    align-items: center;
 }
