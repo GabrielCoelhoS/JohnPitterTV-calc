@@ -1,0 +1,10 @@
+{
+    "name": "Calculadora JohnPitterTV",
+    "description": "Calculadora para te auxiliar na roleta",
+    "version": "0.3",
+    "manifest_version": 3,
+    "permissions": ["activeTab", "scripting"],
+    "action": {
+        "default_popup": "index.html"
+    }
+}
