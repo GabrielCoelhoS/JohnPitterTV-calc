@@ -6,7 +6,7 @@ var divValorInicial = document.querySelector('#divValorInicial')
 var divRodadas = document.querySelector('#divRodadas')
 var divEspecial = document.querySelector('#divEspecial')
 var ErrorSaldo = document.querySelector('.ErrorSaldo')
-var ErrorQauntRodadas = document.querySelector('.ErrorQauntRodadas')
+var ErrorQuantRodadas = document.querySelector('.ErrorQuantRodadas')
 var ErrorValorInicial = document.querySelector('.ErrorValorInicial')
 var ErrorLucroDesejado = document.querySelector('.ErrorLucroDesejado')
 var divResultado = document.querySelector('#Resultado')
@@ -37,55 +37,78 @@ bntEspecial.addEventListener('click', function(){
 })
 formValorInicial.addEventListener('submit',  (event) => {
    event.preventDefault()
-   const SaldoValue = Saldo.value
+   var SaldoValue = Saldo.value
    if(SaldoValue < 1){
     ErrorSaldo.style.display = 'block';
    }
-   const QuantRodadasValue = QuantRodadas.value
-   if(QuantRodadasValue < 1){
-    ErrorQauntRodadas.style.display = 'block';
+   else{
+    ErrorSaldo.style.display = 'none'
    }
-   const MultiplicadorValue = Multiplicador.value
-   const multiplicadorGanhoValue = multiplicadorGanho.value
+   var QuantRodadasValue = QuantRodadas.value
+   if(QuantRodadasValue < 1){
+    ErrorQuantRodadas.style.display = 'block';
+   }
+   else{
+    ErrorQuantRodadas.style.display = 'none'
+   }
+   var MultiplicadorValue = Multiplicador.value
+   valorInicialfuncao(MultiplicadorValue)
+   console.log(VInicial)
+   var multiplicadorGanhoValue = multiplicadorGanho.value
    chanceDerrotaRound1(multiplicadorGanhoValue)
-   console.log(chanceDerrota[0])
-   if(ErrorSaldo.style.display === 'block' && ErrorQauntRodadas.style.display === 'block'){
-
+   VTotal[0] = VInicial
+   console.log(VTotal[0])
+   if(ErrorSaldo.style.display == 'none' && ErrorQuantRodadas.style.display == 'none'){
+    while (VTotal[VTotal.length - 1] < SaldoValue){
+      VTotalVRodada(QuantRodadasValue, MultiplicadorValue)
+      VInicial = VInicial + 1
+    }
+    VInicial = VInicial + 1
+    VTotalVRodada(QuantRodadasValue, MultiplicadorValue)
    }
 })
 function chanceDerrotaRound1(multGanhoValue){
-    if(multGanhoValue === 14){
+    if(multGanhoValue == 14){
         chanceDerrota[0] = 0.93333
        } else{
         chanceDerrota[0] = 0.53333
        }
 }
 function valorInicialfuncao(MultiplicadorFuncao){
-  if(MultiplicadorFuncao === 1 || MultiplicadorFuncao === 2 || MultiplicadorFuncao === 3 || MultiplicadorFuncao === 4){
-    var Valorinicialf = 1
+  if(MultiplicadorFuncao == 1 || MultiplicadorFuncao == 2 || MultiplicadorFuncao == 3 || MultiplicadorFuncao == 4){
+      VInicial = 1
     }
   else
-    if (MultiplicadorFuncao === 1.08){
-    var Valorinicialf = 13
+    if (MultiplicadorFuncao == 1.08){
+      VInicial = 13
     }
   else
-    if (MultiplicadorFuncao === 1.1){
-    var Valorinicialf = 10
+    if (MultiplicadorFuncao == 1.1){
+      VInicial = 10
     }
   else
-    if (MultiplicadorFuncao === 1.2){
-    var Valorinicialf = 5
+    if (MultiplicadorFuncao == 1.2){
+      VInicial = 5
     }
   else
-    if (MultiplicadorFuncao === 1.3){
-    var Valorinicialf = 4
+    if (MultiplicadorFuncao == 1.3){
+      VInicial = 4
     }
   else
-    if (MultiplicadorFuncao === 1.4){
-    var Valorinicialf = 3
+    if (MultiplicadorFuncao == 1.4){
+      VInicial = 3
     }
   else{
-    var Valorinicialf = 2
+      VInicial = 2
     }
-  return Valorinicialf
+}
+function VTotalVRodada(QuantRodadasValue, MultiplicadorValue){
+  var contador = 1
+  VRodada[0] = VInicial
+  while (contador < QuantRodadasValue){
+    VRodada[contador] = parseInt(VRodada[contador - ] * MultiplicadorValue)
+    VTotal[contador] = VTotal[contador] + VRodada[contador]
+    console.log(VTotal[contador])
+    contador = contador + 1
+    }
 }
