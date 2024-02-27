@@ -89,12 +89,12 @@ function VTotalVRodada(QuantRodadasValueF, MultiplicadorValueF){
   }
 }
 function ExibicaoParcial(QuantRodadasValueFu){
-  var j = 0
+  var i = 0
   document.write('<tr id="titulo"><p>RODADA</p><p>APOSTADO</p><p>TOTAL APOSTADO</p><p>CHANCE RIP</p><p>LUCRO</p><p>SALDO</p></tr>')
   while(i > QuantRodadasValueFu){
-    document.write('<tr><p>' + i + 1 + '</p><p>' + VRodada[i] '</p><p>' + VTotal[i] + '</p><p>' + chanceDerrota[i] + '</p><p>' + Lucro[i] + '</p><p>'
-    + SaldoVetor[i]'</p></tr>')
-    j += 1
+    document.write('<tr><p>' + (i + 1) + '</p><p>' + VRodada[i] + '</p><p>' + VTotal[i] + '</p><p>' + chanceDerrota[i] + '</p><p>' + Lucro[i] + '</p><p>'
+    + SaldoVetor[i] + '</p></tr>')
+    i += 1
   }
 }
 formValorInicial.addEventListener('submit',  (event) => {
