@@ -82,8 +82,8 @@ function VTotalVRodada(QuantRodadasValueF, MultiplicadorValueF){
     console.log(VTotal[contador - 1])
     VTotal[contador] = VTotal[contador - 1] + VRodada[contador]
     console.log(VTotal[contador])
-    SaldoVetor[i] = SaldoValue - VTotal[i]    
-    console.log(SaldoVetor[i])
+    SaldoVetor[contador] = SaldoValue - VTotal[contadr]    
+    console.log(SaldoVetor[contador])
     contador = contador + 1
     console.log(contador)
   }
