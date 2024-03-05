@@ -99,7 +99,7 @@ function ExibicaoParcial(QuantRodadasValueFu){
     + SaldoVetor[i] + '</td>'
     console.log(table)
     console.log(tr)
-    table.insertAdjacentHTML("beforeend", tr)
+    table[0].insertAdjacentElement("beforeend", tr)
     i += 1
   }
 }
