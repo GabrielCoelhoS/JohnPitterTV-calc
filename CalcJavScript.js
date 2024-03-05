@@ -5,7 +5,6 @@ var divTelaInicial = document.querySelector('#TelaInicial')
 var divValorInicial = document.querySelector('#divValorInicial')
 var divRodadas = document.querySelector('#divRodadas')
 var divEspecial = document.querySelector('#divEspecial')
-var Resultado = window.document.getElementsByTagName('div')[5]
 var ErrorSaldo = document.querySelector('.ErrorSaldo')
 var ErrorQuantRodadas = document.querySelector('.ErrorQuantRodadas')
 var ErrorValorInicial = document.querySelector('.ErrorValorInicial')
@@ -71,7 +70,7 @@ function valorInicialfuncao(MultiplicadorFuncao){
       VInicial = 2
     }
 }
-function VTotalVRodada(QuantRodadasValueF, MultiplicadorValueF){
+function VTotalVRodada(QuantRodadasValueF, MultiplicadorValueF, multiplicadorGanhoF, SaldoValueF, chanceDerrotaRound1F){
   var contador = 1   
   VTotal[0] = VInicial
   VRodada[0] = VInicial
@@ -82,18 +81,25 @@ function VTotalVRodada(QuantRodadasValueF, MultiplicadorValueF){
     console.log(VTotal[contador - 1])
     VTotal[contador] = VTotal[contador - 1] + VRodada[contador]
     console.log(VTotal[contador])
-    SaldoVetor[contador] = SaldoValue - VTotal[contador]    
+    SaldoVetor[contador] = SaldoValueF - VTotal[contador]    
     console.log(SaldoVetor[contador])
+    Lucro[contador] = (VRodada[contador] * multiplicadorGanhoF) - VTotal[contador]
     contador = contador + 1
     console.log(contador)
+    chanceDerrota[contador - 1] = chanceDerrotaRound1F ** contador
   }
 }
 function ExibicaoParcial(QuantRodadasValueFu){
   var i = 0
-  document.write('<tr id="titulo"><p>RODADA</p><p>APOSTADO</p><p>TOTAL APOSTADO</p><p>CHANCE RIP</p><p>LUCRO</p><p>SALDO</p></tr>')
-  while(i > QuantRodadasValueFu){
-    document.write('<tr><p>' + (i + 1) + '</p><p>' + VRodada[i] + '</p><p>' + VTotal[i] + '</p><p>' + chanceDerrota[i] + '</p><p>' + Lucro[i] + '</p><p>'
-    + SaldoVetor[i] + '</p></tr>')
+  while(i < QuantRodadasValueFu){
+    const table = document.getElementsByTagName('table')
+    console.log(QuantRodadasValueFu, VRodada[i], VTotal[i], chanceDerrota[i], Lucro[i], SaldoVetor[i] )
+    var tr = document.createElement("tr")
+    tr.innerHTML = '<td>' + (i + 1) + '</td><td>' + VRodada[i] + '</td><td>' + VTotal[i] + '</td><td>' + chanceDerrota[i] + '</td><td>' + Lucro[i] + '</td><td>'
+    + SaldoVetor[i] + '</td>'
+    console.log(table)
+    console.log(tr)
+    table.insertAdjacentHTML("beforeend", tr)
     i += 1
   }
 }
@@ -106,6 +112,7 @@ formValorInicial.addEventListener('submit',  (event) => {
    else{
     ErrorSaldo.style.display = 'none'
    }
+   SaldoVetor[0] = SaldoValue
    console.log(SaldoValue)
    var QuantRodadasValue = QuantRodadas.value
    console.log(QuantRodadasValue)
@@ -125,12 +132,13 @@ formValorInicial.addEventListener('submit',  (event) => {
    console.log(VTotal[0])
    if(ErrorSaldo.style.display == 'none' && ErrorQuantRodadas.style.display == 'none'){
     while (VTotal[VTotal.length - 1] < SaldoValue){
-      VTotalVRodada(QuantRodadasValue, MultiplicadorValue)
+      VTotalVRodada(QuantRodadasValue, MultiplicadorValue, multiplicadorGanhoValue, SaldoValue, chanceDerrotaRound1)
       VInicial = VInicial + 1
       console.log(VInicial)
     }
     VInicial = VInicial - 2
-    VTotalVRodada(QuantRodadasValue, MultiplicadorValue)
+    VTotalVRodada(QuantRodadasValue, MultiplicadorValue, multiplicadorGanhoValue, SaldoValue, chanceDerrotaRound1)
+    Lucro[0] = (VInicial * multiplicadorGanhoValue) - VInicial
     if (QuantRodadasValue < 4){
       ExibicaoParcial(QuantRodadasValue)
     }
